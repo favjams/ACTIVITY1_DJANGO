@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glamour Cosmetics - Product Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+        }
+        .product-image {
+            max-height: 500px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'home' %}">Glamour Cosmetics</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'home' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'product' %}">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'about' %}">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="{% url 'blog' %}">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="https://images.unsplash.com/photo-1631214524020-7e18db9a8f92?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Velvet Matte Lipstick" class="img-fluid rounded product-image">
+            </div>
+            <div class="col-md-6">
+                <h1 class="mb-4">Velvet Matte Lipstick</h1>
+                <p class="lead mb-4">$18.99</p>
+                <p class="mb-4">Experience the luxurious feel and long-lasting color of our Velvet Matte Lipstick. This lightweight formula glides on smoothly for a comfortable, non-drying matte finish that stays put all day.</p>
+                
+                <div class="mb-4">
+                    <h4>Key Features:</h4>
+                    <ul>
+                        <li>Long-lasting, transfer-resistant formula</li>
+                        <li>Comfortable matte finish</li>
+                        <li>Enriched with vitamin E and jojoba oil for hydration</li>
+                        <li>Vegan and cruelty-free</li>
+                    </ul>
+                </div>
+
+                <form>
+                    <div class="mb-3">
+                        <label for="shade" class="form-label">Select Shade</label>
+                        <select class="form-select" id="shade">
+                            <option value="1">Classic Red</option>
+                            <option value="2">Nude Pink</option>
+                            <option value="3">Berry Blast</option>
+                            <option value="4">Coral Sunset</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="quantity" class="form-label">Quantity</label>
+                        <input type="number" class="form-control" id="quantity" value="1" min="1">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-lg mb-3">Add to Cart</button>
+                </form>
+
+                <div class="d-flex align-items-center mb-4">
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star text-warning"></i>
+                    <i class="fas fa-star-half-alt text-warning"></i>
+                    <span class="ms-2">4.5 out of 5 stars (128 reviews)</span>
+                </div>
+
+                <div class="mb-4">
+                    <h4>Share this product:</h4>
+                    <a href="#" class="btn btn-outline-primary me-2"><i class="fab fa-facebook-f"></i> Share</a>
+                    <a href="#" class="btn btn-outline-info me-2"><i class="fab fa-twitter"></i> Tweet</a>
+                    <a href="#" class="btn btn-outline-danger"><i class="fab fa-pinterest"></i> Pin</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="mb-4">Product Details</h2>
+                <table class="table table-striped">
+                    <tbody>
+                        <tr>
+                            <th scope="row">Product Type</th>
+                            <td>Lipstick</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Finish</th>
+                            <td>Matte</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Net Weight</th>
+                            <td>3.5g / 0.12 oz</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">Ingredients</th>
+                            <td>Ricinus Communis (Castor) Seed Oil, Caprylic/Capric Triglyceride, Cetyl Ethylhexanoate, Candelilla Cera, Silica, Vinyl Dimethicone/Methicone Silsesquioxane Crosspolymer, Polyethylene, Cetyl Alcohol, Dimethicone/Vinyl Dimethicone Crosspolymer, Stearalkonium Hectorite, Propylene Carbonate, Pentaerythrityl Tetra-di-t-butyl Hydroxyhydrocinnamate, Simmondsia Chinensis (Jojoba) Seed Oil, Tocopheryl Acetate. May Contain: CI 77891, CI 77491, CI 77492, CI 77499, CI 15850, CI 45410.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-md-12">
+                <h2 class="mb-4">Customer Reviews</h2>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Amazing color and staying power!</h5>
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">This lipstick is incredible! The color is vibrant and long-lasting, and it doesn't dry out my lips like other matte formulas. I'm in love!</p>
+                        <p class="card-text"><small class="text-muted">Posted by Sarah on April 15, 2024</small></p>
+                    </div>
+                </div>
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title">Good, but could be better</h5>
+                        <div class="mb-2">
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="fas fa-star text-warning"></i>
+                            <i class="far fa-star text-warning"></i>
+                        </div>
+                        <p class="card-text">The color is beautiful, but I found it a bit drying after a few hours. It's still a good lipstick, but I wish it was more hydrating.</p>
+                        <p class="card-text"><small class="text-muted">Posted by Emily on April 10, 2024</small></p>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-outline-primary">See All Reviews</a>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center text-lg-start mt-4">
+        <div class="container p-4">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Glamour Cosmetics</h5>
+                    <p>Discover the beauty within you with our premium makeup products.</p>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase">Links</h5>
+                    <ul class="list-unstyled mb-0">
+                        <li><a href="#!" class="text-dark">FAQ</a></li>
+                        <li><a href="#!" class="text-dark">Shipping</a></li>
+                        <li><a href="#!" class="text-dark">Returns</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-0">Follow Us</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#!" class="text-dark"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                        <li><a href="#!" class="text-dark"><i class="fab fa-instagram"></i> Instagram</a></li>
+                        <li><a href="#!" class="text-dark"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2024 Glamour Cosmetics. All rights reserved.
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
